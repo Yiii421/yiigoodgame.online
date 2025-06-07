@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YiiGoodGame - Play Amazing Free Online Games | Best HTML5 Browser Games</title>
+    <meta name="description" content="Play the best free online games! Enjoy action, adventure, racing, puzzle games and more. No downloads required - play instantly in your browser!">
+    <meta name="keywords" content="free online games, browser games, HTML5 games, play games online, action games, racing games, adventure games">
+    <meta name="author" content="YiiGoodGame">
+    <link rel="canonical" href="https://yiigoodgame.online">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="YiiGoodGame - Play Amazing Free Online Games">
+    <meta property="og:description" content="Play the best free online games! Action, adventure, racing, puzzle games and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yiigoodgame.online">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .game-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.8); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-gradient">YiiGoodGame</h1>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#games" class="text-gray-300 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Games</a>
+                        <a href="#about" class="text-gray-300 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#contact" class="text-gray-300 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#games" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Games</a>
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="floating-animation">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6">
+                    Play Amazing
+                    <span class="text-gradient block">Free Online Games</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                    Discover the best collection of HTML5 games! Action, adventure, racing, puzzles and more. 
+                    No downloads required - play instantly in your browser!
+                </p>
+                <a href="#games" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 pulse-glow">
+                    <i class="fas fa-gamepad mr-2"></i>Start Playing Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-16 px-4 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold mb-4">Featured Games</h3>
+                <p class="text-xl text-gray-300">Choose from our collection of exciting free online games</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Game 1: Stickman Parkour -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-running text-4xl text-blue-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Stickman Parkour</h4>
+                        <p class="text-sm text-gray-200 mb-4">Experience thrilling parkour action with agile stickman moves through challenging obstacles!</p>
+                    </div>
+                    <button onclick="playGame('stickman-parkour')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 2: Kick the Pirate -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-skull-crossbones text-4xl text-red-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Kick the Pirate</h4>
+                        <p class="text-sm text-gray-200 mb-4">Launch attacks and defeat pirates in this hilarious physics-based action game!</p>
+                    </div>
+                    <button onclick="playGame('kick-the-pirate')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 3: Mob City -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-city text-4xl text-yellow-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Mob City</h4>
+                        <p class="text-sm text-gray-200 mb-4">Enter the dangerous underworld! Complete missions and build your criminal empire.</p>
+                    </div>
+                    <button onclick="playGame('mob-city')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 4: Mini Cars Racing -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-car text-4xl text-green-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Mini Cars Racing</h4>
+                        <p class="text-sm text-gray-200 mb-4">Race miniature cars at breakneck speeds with realistic physics and stunning graphics!</p>
+                    </div>
+                    <button onclick="playGame('mini-cars-racing')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 5: Highway Cars -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-road text-4xl text-purple-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Highway Cars</h4>
+                        <p class="text-sm text-gray-200 mb-4">Hit the highway for endless racing! Dodge traffic and race at high speeds.</p>
+                    </div>
+                    <button onclick="playGame('highway-cars')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 6: Archer Hero -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-bow-arrow text-4xl text-orange-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Archer Hero</h4>
+                        <p class="text-sm text-gray-200 mb-4">Become the ultimate archer! Master bow skills in epic medieval adventures.</p>
+                    </div>
+                    <button onclick="playGame('archer-hero')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 7: Fast Food Rush -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-hamburger text-4xl text-pink-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Fast Food Rush</h4>
+                        <p class="text-sm text-gray-200 mb-4">Manage your restaurant! Serve customers quickly in this exciting time management game.</p>
+                    </div>
+                    <button onclick="playGame('fast-food-rush')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 8: Mafia Getaway Cars -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-car-side text-4xl text-red-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Mafia Getaway Cars</h4>
+                        <p class="text-sm text-gray-200 mb-4">Execute perfect getaways! Drive powerful cars and escape police chases.</p>
+                    </div>
+                    <button onclick="playGame('mafia-getaway-cars')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 9: Treasure Hunter -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-gem text-4xl text-cyan-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Treasure Hunter</h4>
+                        <p class="text-sm text-gray-200 mb-4">Embark on treasure hunting adventures! Solve puzzles and discover hidden treasures.</p>
+                    </div>
+                    <button onclick="playGame('treasure-hunter')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+
+                <!-- Game 10: Dark Ninja Hanjo -->
+                <div class="game-card rounded-xl p-6 text-white shadow-lg">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-user-ninja text-4xl text-indigo-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Dark Ninja Hanjo</h4>
+                        <p class="text-sm text-gray-200 mb-4">Master the way of the ninja! Sneak through shadows in this stealth action adventure.</p>
+                    </div>
+                    <button onclick="playGame('dark-ninja-hanjo')" class="w-full bg-white text-gray-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>Play Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-gray-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-8">Why Choose YiiGoodGame?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <i class="fas fa-bolt text-4xl text-blue-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Instant Play</h4>
+                    <p class="text-gray-300">No downloads required. Click and play instantly in your browser!</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <i class="fas fa-mobile-alt text-4xl text-green-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Mobile Friendly</h4>
+                    <p class="text-gray-300">Play on any device - desktop, tablet, or mobile. Optimized for all screens!</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <i class="fas fa-heart text-4xl text-red-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Always Free</h4>
+                    <p class="text-gray-300">100% free games with no hidden costs. Enjoy premium gaming experience!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gradient mb-2">YiiGoodGame</h2>
+                <p class="text-gray-400">Your destination for amazing free online games</p>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6">
+                <p class="text-gray-400 text-sm">
+                    © 2025 YiiGoodGame.online. All rights reserved. | 
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl w-full max-w-6xl h-5/6 flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                <h3 id="gameTitle" class="text-xl font-bold">Game Title</h3>
+                <button onclick="closeGame()" class="text-gray-400 hover:text-white text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex-1 p-4">
+                <iframe id="gameFrame" src="" class="w-full h-full rounded-lg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="p-4 border-t border-gray-700 text-center">
+                <button onclick="closeGame()" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-home mr-2"></i>Back to Games
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Game data
+        const games = {
+            'stickman-parkour': {
+                title: 'Stickman Parkour',
+                url: 'https://cloud.onlinegames.io/games/2024/construct/219/stickman-parkour/index-og.html'
+            },
+            'kick-the-pirate': {
+                title: 'Kick the Pirate',
+                url: 'https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html'
+            },
+            'mob-city': {
+                title: 'Mob City',
+                url: 'https://www.onlinegames.io/games/2021/unity3/mob-city/index.html'
+            },
+            'mini-cars-racing': {
+                title: 'Mini Cars Racing',
+                url: 'https://cloud.onlinegames.io/games/2021/unity/mini-cars-racing/index-og.html'
+            },
+            'highway-cars': {
+                title: 'Highway Cars',
+                url: 'https://www.onlinegames.io/games/2023/construct/211/highway-cars/index.html'
+            },
+            'archer-hero': {
+                title: 'Archer Hero',
+                url: 'https://www.onlinegames.io/games/2023/unity/archer-hero/index.html'
+            },
+            'fast-food-rush': {
+                title: 'Fast Food Rush',
+                url: 'https://cloud.onlinegames.io/games/2025/unity/fast-food-rush/index-og.html'
+            },
+            'mafia-getaway-cars': {
+                title: 'Mafia Getaway Cars',
+                url: 'https://cloud.onlinegames.io/games/2025/construct/298/mafia-getaway-cars/index-og.html'
+            },
+            'treasure-hunter': {
+                title: 'Treasure Hunter',
+                url: 'https://www.onlinegames.io/games/2022/construct/164/treasure-hunter/index.html'
+            },
+            'dark-ninja-hanjo': {
+                title: 'Dark Ninja Hanjo',
+                url: 'https://www.onlinegames.io/games/2023/unity/dark-ninja-hanjo/index.html'
+            }
+        };
+
+        // Play game function
+        function playGame(gameId) {
+            const game = games[gameId];
+            if (game) {
+                document.getElementById('gameTitle').textContent = game.title;
+                document.getElementById('gameFrame').src = game.url;
+                document.getElementById('gameModal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close game function
+        function closeGame() {
+            document.getElementById('gameModal').classList.add('hidden');
+            document.getElementById('gameFrame').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('gameModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeGame();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
